@@ -1,0 +1,12 @@
+﻿using Microsoft.EntityFrameworkCore;
+
+namespace Mission06_Pierce.Models
+{
+    public class MovieDbContext : DbContext
+    {
+        public MovieDbContext(DbContextOptions<MovieDbContext> options) : base(options) { }
+
+        public DbSet<Application> Movies { get; set; }
+    }
+}
+

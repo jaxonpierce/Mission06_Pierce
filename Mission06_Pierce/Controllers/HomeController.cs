@@ -1,23 +1,20 @@
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.EntityFrameworkCore;
 
-namespace Mission06_Pierce.Controllers
+public class HomeController : Controller
 {
-    public class HomeController : Controller
+    private readonly MovieDBContext _context;
+
+    public HomeController(MovieDBContext context)
     {
-        public IActionResult Index()
-        {
-            return View();
-        }
+        _context = context ?? throw new ArgumentNullException(nameof(context));
+    }
 
-        public IActionResult About()
-        {
-            return View();
-        }
-
-        public IActionResult Create()
-        {
-            return View();
-        }
+    public IActionResult Index()
+    {
+        var movies = _context.Movies.ToList();  // Ensure movies are being retrieved
+        return View(movies);
     }
 }
+
 

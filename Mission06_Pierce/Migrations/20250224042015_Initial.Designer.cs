@@ -10,8 +10,8 @@ using Mission06_Pierce.Models;
 namespace Mission06_Pierce.Migrations
 {
     [DbContext(typeof(MovieDbContext))]
-    [Migration("20250214200650_hello")]
-    partial class hello
+    [Migration("20250224042015_Initial")]
+    partial class Initial
     {
         /// <inheritdoc />
         protected override void BuildTargetModel(ModelBuilder modelBuilder)

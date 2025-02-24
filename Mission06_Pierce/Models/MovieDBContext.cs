@@ -4,9 +4,13 @@ namespace Mission06_Pierce.Models
 {
     public class MovieDbContext : DbContext
     {
-        public MovieDbContext(DbContextOptions<MovieDbContext> options) : base(options) { }
+        public MovieDbContext(DbContextOptions<MovieDbContext> options)
+            : base(options)
+        {
+        }
 
-        public DbSet<Application> Movies { get; set; }
+        public DbSet<Movie> Movies { get; set; }
     }
 }
+
 
